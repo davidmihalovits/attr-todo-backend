@@ -10,6 +10,9 @@ const Todo = db.define("todo", {
     todo: {
         type: DataTypes.STRING,
     },
+    userid: {
+        type: DataTypes.STRING,
+    },
 });
 
 module.exports = Todo;

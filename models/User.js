@@ -7,12 +7,14 @@ const User = db.define("user", {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
     },
-    userName: {
+    username: {
         type: DataTypes.STRING,
         unique: true,
+        required: true,
     },
     password: {
         type: DataTypes.STRING,
+        required: true,
     },
     image: {
         type: DataTypes.STRING,
