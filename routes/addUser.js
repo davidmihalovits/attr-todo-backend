@@ -36,7 +36,7 @@ exports.addUser = async (req, res) => {
             password: bcryptPassword,
         });
 
-        return res.json(newUser);
+        return res.json({ newUser });
     } catch (error) {
         console.log(error);
         return res.json({ status: "Couldn't add user." });

@@ -42,9 +42,9 @@ app.delete("/deleteUser/:id", auth, deleteUser);
 app.post("/addTodo", auth, addTodo);
 app.put("/updateTodo/:id", auth, updateTodo);
 app.delete("/deleteTodo/:id", auth, deleteTodo);
-app.get("/getTodos", auth, getTodos);
+app.get("/getTodos/:id", auth, getTodos);
 
-// runs on port 5000 locally or on environment provided by server (Heroku)
+// runs on port 5000 locally or on environment provided by server (e.g. Heroku)
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}.`));

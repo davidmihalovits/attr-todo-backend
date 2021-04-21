@@ -5,8 +5,9 @@ exports.getTodos = async (req, res) => {
         // get todos and return them
         const todos = await Todo.findAll({
             where: {
-                userid: req.body.userid,
+                userid: req.params.id,
             },
+            order: [["createdAt", "DESC"]],
         });
 
         return res.json(todos);
